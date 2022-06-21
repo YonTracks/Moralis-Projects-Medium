@@ -24,7 +24,7 @@ const Rightbar = ({handleSearchBlog}) => {
   }; 
   
   function handleSearchBlog() {
-    setSearchText(searchText);
+    setSearchText(handleSearchBlog);
   };
   console.log(searchText);
   return (
@@ -33,7 +33,7 @@ const Rightbar = ({handleSearchBlog}) => {
       
       <MdSearch className="search-icons" size="1.8em" />
       <input
-        onChange={(e) => handleSearchBlog(e.text)}
+        onChange={() => handleSearchBlog(setSearchText.toString())}
         style={styles.search_input}
         type="text"
         placeholder="  search..."
