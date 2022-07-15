@@ -53,4 +53,4 @@ const Rightbar = () => {
   );
 };
 
-export default Rightbar();
+export default Rightbar;
