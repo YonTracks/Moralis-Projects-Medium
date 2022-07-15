@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Rightbar.css";
 import { MdSearch } from "react-icons/md";
 import trends from "../config/Trends";
-const Rightbar = ({handleSearchBlog}) => {
-  const [searchText, setSearchText] = useState("");  
+const Rightbar = () => {
+   
   const styles = {
     search: {
       padding: "2px",
@@ -23,20 +23,18 @@ const Rightbar = ({handleSearchBlog}) => {
     },
   }; 
   
-  function handleSearchBlog() {
-    setSearchText(searchText);
-  };
-  
   return (
     <>
       <div className="rightbarContent">
       
       <MdSearch className="search-icons" size="1.8em" />
       <input
-        onChange={(e) => console.log(searchText)}
+        onChange={""}
         style={styles.search_input}
         type="text"
         placeholder="  search..."
+        name="searchText"
+        
       />
         <div className="trends">
           Trending Today?
@@ -55,4 +53,4 @@ const Rightbar = ({handleSearchBlog}) => {
   );
 };
 
-export default Rightbar;
+export default Rightbar();
